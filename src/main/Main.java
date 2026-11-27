@@ -6,11 +6,14 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		User user = new User;
+		Com com = new Com();
 		System.out.println("これからわたしとじゃんけんをしましょう");
 	    System.out.print("選んでください。0:グー 1:チョキ 2:パー > ");
-	    int user = new Scanner(System.in).nextInt();   
-	    int com = new Random().nextInt(3);
-	    printHand(user, com);
+	    user.hand = new Scanner(System.in).nextInt();   
+	    com.hand = new Random().nextInt(3);
+	    user.printHand();
+	    com.printHand();
 	    judge(user, com);
 	    
 	}
